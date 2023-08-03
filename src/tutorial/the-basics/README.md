@@ -62,7 +62,8 @@ Below, this example dissembles what you have just created!
  52             // MSTORE           // []                 Store (n2+n1) in the first 32 bytes of memory
  60 20          // PUSH1 0x20       // [0x20]
  60 00          // PUSH1 0x00       // [0x00, 0x20]
- f3             // RETURN           // []                 Return the first 32 bytes of memory ```
+ f3             // RETURN           // []                 Return the first 32 bytes of memory 
+```
 
 If you want to step through the execution yourself you can check out this snippet interactively in [evm.codes](https://www.evm.codes/playground?unit=Wei&codeType=Bytecode&code='~3560203501~526020~f3'~6000%01~_) (pass in the calldata `0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002` and click RUN to get started). This calldata is the numbers 1 and 2, both padded to 32 bytes. After running this snippet, you should end up with a return value of `0000000000000000000000000000000000000000000000000000000000000003`. Which is expected! `addTwo.huff` successfully added the numbers 1 and 2, returning 3! If you are new to working with assembly, I strongly suggest you do this as visualizing the individual instructions helps tremendously with learning.
 
