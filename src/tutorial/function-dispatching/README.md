@@ -106,8 +106,8 @@ In Huff all of your macros are inlined into one long bytecode string (this is al
 For example:
 
 ```huff
-#define function returnOne() public returns(uint256)
-#define function returnTwo() public returns(uint256)
+#define function returnOne() view returns(uint256)
+#define function returnTwo() view returns(uint256)
 
 /// @notice returns the value one
 #define macro RETURN_ONE() = {
